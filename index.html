@@ -10,33 +10,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Pushy CSS -->
+    <link rel="stylesheet" href="css/pushy.css">
+        
 	<link rel="stylesheet" href="css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="navbar navbar-fixed-top" data-activeslide="1">
-		<div class="container">
-		<div class="nav-collapse collapse navbar-responsive-collapse">
-			<ul class="nav row">
-				<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1"><span class="text">HOME</span></a></li>
-				<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2"><span class="text">EDUCATION</span></a></li>
-				<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3"><span class="text">EXPERIENCE</span></a></li>
-			</ul>
-		</div>	
-		</div>
-	</div> <!-- nav bar -->
+	
+	<!-- Pushy Menu -->
+	<section class="navigation">
+		<a id="navicon" class="animated fadeInLeft closed menu-btn"></a>
+        <div class="nav pushy pushy-left">        	
+            <ul>
+                <li data-slide="1"  class="pushy-link"><a id="menu-link-1" href="#slide-1">HOME</a></li>
+				<li data-slide="2"  class="pushy-link"><a id="menu-link-2" href="#slide-2">EDUCATION</a></li>
+				<li data-slide="3"  class="pushy-link"><a id="menu-link-3" href="#slide-3"><i class="fa fa-suitcase"></i>My Work</span></a></li>
+            </ul>
+        </div>
+    </section>
 
-
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+        
 	<section class="slide story" id="slide-1" data-slide="1">
 		<div class="container">
 			<div class="row">
 	  			<div class="col-8">
 	  				<h1 class="animated fadeInUp">NARASIMMAN SAIRAM</h1>
     				
-		  			<p> Master of Science in Computer Science </p>
-			    	<p> New York University </p>
-			    	
-			      	<p id="aboutme" class="animated fadeInUp">"I am a final year student pursuing Masters in Computer Science at New York University - Courant Institute of Mathematical Sciences. My interests lies in the field of Software Development and Web development in large scale distributed systems."</p>
+		  		  	<p id="aboutme" class="animated fadeInUp">"I am a final year student pursuing Masters in Computer Science at New York University - Courant Institute of Mathematical Sciences. My interests lies in the field of Software Development and Web development in large scale distributed systems."</p>
 
 	    		</div>
   				<div class="col-4">
@@ -92,6 +95,15 @@
 		                </li>
 		            </ul>
 		            
+		            <p class="resume concealed visible animated fadeInUp">
+                        Want to hire me? check out my resume:
+                        <br>
+                        <a href="narasimmansairam.pdf" target="_blank" class="fa fa-file-text"></a>
+                    </p>
+		            	
+
+		            </a>
+
   				</div> <!-- Social -->
 
 	  		</div>
@@ -183,11 +195,10 @@
       </div>
     </footer>  
 
-	<script src="js/html5shiv.js"></script>
 	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Pushy JS -->
+    <script src="js/pushy.min.js"></script>
 	<script src="js/myscript.js"></script>
 	
 </body>

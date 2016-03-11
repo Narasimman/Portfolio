@@ -21,7 +21,7 @@ $(document).ready(function ($) {
 		e.preventDefault();
 		dataslide = $(this).attr('data-slide');
 		goToByScroll(dataslide);
-		$(".nav-collapse").collapse('hide');
+		//$(".nav-collapse").collapse('hide');
 	});
 
 	$(".social ul li").hover(function() {
