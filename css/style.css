@@ -1,0 +1,216 @@
+.font-thin {
+	font-family: "Titillium Web", sans-serif;
+	font-weight: 200;
+}
+
+.font-semibold {
+	font-family: "Titillium Web", sans-serif;
+	font-weight: 600;
+}
+
+.font-light {
+	font-family: "Titillium Web", sans-serif;
+	font-weight: 300;
+}
+
+* {
+	position: relative;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: #2f2f2f;
+    color: #e4e6e5;
+	font-family: "Titillium Web", sans-serif;
+	font-weight: normal;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+h1, h2, h3 {
+	font-family: "Titillium Web", sans-serif;
+}
+
+.navbar {
+	background-color: rgba( 0, 0, 0, .5 );
+    border-bottom: 1px solid #bfbfbf;
+    font-size: 12px;
+    transition: .25s all linear;
+    color: #fff !important
+}
+.navbar .nav a {
+    color: #e4e6e5;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    transition: all .5 linear;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+	background-color: inherit;
+	outline: none;
+}
+
+#aboutme {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 20px;
+	padding: 20px 0;
+}
+
+.headshot {
+	padding: 30px 0;
+}
+
+.social {
+	padding: 30px 0;
+}
+
+a {
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.social {
+	padding: 10px 20px;
+}
+
+#slide-1 {
+	background-color: #2f2f2f;
+    color: #e4e6e5;
+	padding-top: 50px;	
+	padding-bottom: 140px;
+}
+
+#slide-2 {
+    background-color: #b94a48;
+    color: #e4e6e5;
+    padding: 50px 0;
+}
+
+#slide-3 {
+	background-color: #34495e;
+    color: #e4e6e5;
+	padding: 50px;	
+}
+
+.footer {
+  width: 100%;
+  margin: auto;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+}
+
+.footer p {
+	text-align: center;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
+	
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 320px;
+	
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.flip-info {
+	background-color: #eee;
+	color: #000;
+	margin: 25px 0;
+}
+
+.social ul {
+    list-style: none;
+}
+
+.social ul li {
+    display: inline-block;
+    min-width: 50px;
+    min-height: 75px;
+    margin: 0 30px;
+    padding: 0 30px;
+    position: relative;
+}
+
+
+/* color of the icons before hover state */
+
+.social ul li a {
+    color: #bdbdbd;
+}
+
+.social ul li a i {
+    font-size: 3em;
+}
+
+.social ul li a p {
+    position: absolute;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: none;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 10px;
+    color: inherit;
+}
+
+.social ul .email:hover a {
+    color: #000000;
+}
+
+.social ul .github:hover a {
+    color: #000000;
+}
+
+.social ul .linkedin:hover a {
+    color: #4875B4;
+}
+
+.social ul .twitter:hover a {
+    color: #33CCFF;
+}
+
+.social .dash {
+    background-color: #424242;
+}
