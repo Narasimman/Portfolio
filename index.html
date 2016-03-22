@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<!-- Pushy CSS -->
 	<link rel="stylesheet" href="css/pushy.css">
+	<link rel="stylesheet" href="css/pushyoverride.css">
 
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,9 +23,10 @@
 		<a id="navicon" class="animated fadeInLeft closed menu-btn"></a>
 		<div class="nav pushy pushy-left">        	
 			<ul>
-			<li data-slide="1"  class="pushy-link"><a id="menu-link-1" href="#aboutme"><i class="fa fa-terminal"></i>About Me</a></li>
-			<li data-slide="2"  class="pushy-link"><a id="menu-link-2" href="#education"><i class="fa fa-graduation-cap"></i>Education</a></li>
-			<li data-slide="3"  class="pushy-link"><a id="menu-link-3" href="#work"><i class="fa fa-suitcase"></i>My Work</span></a></li>
+			<li data-slide="1"  class="pushy-link"><a id="menu-link-1" href="#aboutme"><i class="fa fa-terminal"></i>Home</a></li>
+			<li data-slide="2"  class="pushy-link"><a id="menu-link-2" href="#education"><i class="fa fa-graduation-cap"></i>About Me</a></li>
+			<li data-slide="3"  class="pushy-link"><a id="menu-link-3" href="#work"><i class="fa fa-suitcase"></i>Experience</span></a></li>
+			<li data-slide="4"  class="pushy-link"><a id="menu-link-3" href="#work"><i class="fa fa-suitcase"></i>Projects</span></a></li>
 			</ul>
 		</div>
 	</section>
@@ -117,79 +119,88 @@
 	</section>
 
 
-	<section class="slide story" id="education" data-slide="3">
+	<section class="slide story" id="work" data-slide="3">
 		<div class="container">
-			<div class="row">
-				<h2 class="animated fadeInUp">EDUCATION</h2>
-
-				<h3 class="animated fadeInUp"> Master's in Computer Science </h3>
-				<p class="animated fadeInUp"> <a href="https://cs.nyu.edu/"> Courant Institute of Mathematical Sciences - New York University (2016)</a></p>
-
-				<div class="table-responsive"> 
-					<table class="table table-bordered">
-						<thead>
-							<tr>
-								<th>Course</th><th>Semester</th>		                
-							</tr>
-						</thead>
-						<tbody>
-							<tr><td>Natural Language Processing</td><td>Spring 2016</td></tr>				            
-							<tr><td>Web search Engines</td><td>Spring 2016</td></tr>
-							<tr><td>Web and Mobile Application Development</td><td>Spring 2016</td></tr>
-							<tr><td><a target="_blank" href="http://news.cs.nyu.edu/~jinyang/fa15-ds/">Distributed Systems</a></td><td>Fall 2015</td></tr>
-							<tr><td>Artificial Intelligence</td><td>Fall 2015</td></tr>
-							<tr><td>Real time and Big data Analytics</td><td>Fall 2015</td></tr>
-							<tr><td>Fundamental Algorithms</td><td>Spring 2015</td></tr>
-							<tr><td>Operating Systems</td><td>Spring 2015</td></tr>
-							<tr><td>Financial Computing</td><td>Spring 2015</td></tr>
-						</tbody>
-					</table>
-				</div>
-			</div> <!-- row -->
-
-			<div class="row">
-				<h3>Bachelor of Technology in Information Technology (2010)</h3>
-				<p><a href="http://mitindia.edu/">Madras Institute of Technology - Anna University</a></p>
+			<div class="col-md-12 center">
+				<h1>Work Experience</h1>				
+				<div class="dash animated fadeIn"></div>
+				<p>A Seasoned Software Engineer</p>
 			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="box">
+						<h3 class="animated fadeInUp"> Pegasystems Inc. </h3>
+						<p> Software Engineer in UI - (March 2013 - December 2014)</p>
+						<p class="job-desc"> Designed and implemented web application that supports the architecture in offline mode.</p>
+						<p class="job-desc">Developed Responsive Web Applications for Android Mobile and Tablets working with globally distributed teams.</p>						
+					</div>
+				</div>
+
+
+				<div class="col-md-12">
+					<div class="box">
+						<h3 class="animated fadeInUp"> United Online Inc. </h3>
+						<p> Software Engineer - (May 2010 - March 2013)</p>
+						<p class="job-desc"> Developed Java based components for e-commerce ad-server and mass mailer that sends out deals to 9M members.</p>
+						<p class="job-desc">Built and maintained test-staging servers and weekly production releases.</p>
+						<p class="job-desc">Revamped Mypoints.com website as a member of the web development team in San Francisco.</p>
+						<p class="job-desc">Improved user experience by redesigning UI, porting to latest technologies and adding social media Integrations.</p>
+					</div>
+				</div>
+
+
+			</div>
+
 		</div> <!-- Container -->
 	</section> 
 
-	<section class="slide story" id="work" data-slide="4">
+	<section class="slide story" id="projects" data-slide="4">
 		<div class="container">
-			<div class="row title-row">
-				<section id="main_content">
-
-					<h2 class="animated fadeInUp">PROFESSIONAL EXPERIENCE (4 YEARS AND 6 MONTHS)</h2>
-
-					<h3>Student Research Assistant May 2015 to Present</h3>
-
-					<p><a target="_blank" href="http://urbanizationproject.org/"> NYU Stern Urbanization project (Sponsored by UNITED NATIONS) - New York University</a></p>
-					<p>PHP | Web development | AJAX | CodeIgniter framework</p>
-
-					<ul>
-						<li>As the only Technology Developer in the team working on a global program of research conducted at 200 cities, preparing for HABITAT III – the United Nations conference, I'm building surveys and websites in ten global languages.</li>
-					</ul>
-
-					<h3>Software Development Engineer Mar 2013 to Dec 2014</h3>
-					<p><a target="_blank" href="https://www.pega.com">Pegasystems Inc., Bangalore, India</a></p>
-					<p>Java | JavaScript | HTML | CSS | Handlebar JS | Jquery | REST web services | Agile Development | Scrum</p>
-
-					<ul>
-						<li>As a member of UI Engineering team at Pega, we designed and implemented a new web application that supports PRPC application architecture and infrastructure in offline mode using latest UI technologies.</li>
-						<li>Developed Pega Applications for IPhone, IPad and Android Mobile and Tablets working across time zones with distributed teams in Cambridge, US and Krakow, Poland.</li>
-					</ul>
-
-					<h3>Software Development Engineer - July 2010 to Feb 2013</h3>
-
-					<p><a target="_blank" href="https://www.mypoints.com"> United Online Software Development (India) Pvt. Ltd., Hyderabad, India</a></p>
-					<p>Java | JSP | Struts | Hibernate | DOJO JavaScript | MySQL | JUnit Testing | Agile Development | Linux |</p>
-
-					<ul>
-						<li>As a primary developer of Mypoints.com, I developed Java based components for e-commerce ad server and mass mailer that manages ads and sends out deals to the members.</li>
-						<li>Member of the core web development team revamping Mypoints.com website to improve user experience by redesigning user interfaces and adding social sharing APIs.</li>
-					</ul>
-				</section>			
+			<div class="col-md-12 center">
+				<h1>Projects and Skills</h1>				
+				<div class="dash animated fadeIn"></div>
+				<p></p>
 			</div>
+				
+		<div class="row">
+			<div class="col-md-4">
+				<div class="box">
+					<h3 class="animated fadeInUp"> Distributed Systems - Key Value Service </h3>
+					<p> <a href="https://github.com/Narasimman/DS-MapReduce">Github</a> </p>
+					<p class="proj-desc">Implemented a sequentially consistent, high performance distributed system tolerating crashes, disk failures and network partitioning. Built architecture patterned on systems like BigTable and Spanner.</p>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="box">
+					<h3 class="animated fadeInUp"> Big Data - Exploratory Correlation Analysis on NYC Public data </h3>
+					<p> <a href="https://github.com/Narasimman/Most-hapennning-places-NYC">Github</a> </p>
+					<p class="proj-desc"> Performed data pre-processing and grouping with zip codes of a ~30GB sized dataset using Big Data technologies. Calculated moving averages and found exploratory correlation between NYC taxi ridership and public events</p>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="box">
+					<h3 class="animated fadeInUp"> Global Urban Expansion Survey </h3>
+					<p> <a href="http://urbanizationproject.org/">Urbanization  Website</a> </p>
+					<p class="proj-desc"> Graduate Research Assistant in a team of 20 researchers on a global Urban Expansion program sponsored by United Nations; computerized multi-lingual surveys, built website, maintained entire stack of the application.</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="box">
+					<h3 class="animated fadeInUp"> Information Retrieval System - Search Overflow </h3>
+					<p> <a href="https://github.com/Narasimman/SearchOverflow">Github</a> </p>
+					<p class="proj-desc">A Query Engine to leverage the body of knowledge created by crowd sourcing(Stack Overflow), to recommend high quality, embeddable code.</p>
+				</div>
+			</div>
+		</div>
+
+
 		</div> <!-- Container -->
 	</section> 
 
@@ -197,7 +208,7 @@
 	<footer class="footer">
 		<div class="container">
 			<p> 2016. All rights reserved. Built by Narasimman Sairam</p>
-			<p> <img class="logo" src="images/nyu_logo.png" width="110" height="40" alt=""></p>
+			<img class="logo" src="images/nyu_logo.png" width="90" height="30" alt="">
 		</div>
 	</footer>  
 
