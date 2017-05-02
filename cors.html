@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Simple use of Cross-Site XMLHttpRequest </title>
+    <script type="text/javascript">
+    
+    var invocation = new XMLHttpRequest();
+    var invocation1 = new XMLHttpRequest();
+    var url = 'https://pr.comet.yahoo.com/comet';
+    var authtoken;
+    var clientId;
+
+    var method = 'POST';
+
+    function doHandshake() {
+        invocation.open(method, url, true);
+        invocation.setRequestHeader('Content-Type', 'application/json');
+        invocation.withCredentials = true;
+        invocation.onreadystatechange = handlerShake;
+        
+        var data = '[{"id":"1","ext":{"timestamp":1481858786544,"host":"messenger.yahoo.com"},"channel":"/meta/handshake","version":"1.0","supportedConnectionTypes":["long-polling"]}]'; 
+
+        invocation.send(data);
+
+    }
+
+
+        function handlerShake(evtXHR) {
+        if (invocation.readyState == 4)
+        {
+            if (invocation.status == 200)
+            {
+                var response = invocation.responseText;
+                var auth = JSON.parse(response);
+                clientId = auth[0].clientId;
+
+                var item = document.getElementById('res');
+                item.innerHTML += "<br><br><br> clientId: " + clientId + "<br>";
+
+                getAuthInfo();
+            }
+            else
+            {
+                alert("Invocation Errors Occured " + invocation.readyState + " and the status is " + invocation.status);
+            }
+        }
+
+    }
+
+
+
+    function getAuthInfo() {
+        invocation.open(method, url, true);
+        invocation.setRequestHeader('Content-Type', 'application/json');
+        invocation.withCredentials = true;
+        invocation.onreadystatechange = handlerAuth;
+        
+        var data = '[{"id":"2","ext":{"Comet-api-version":"1.1","Comet-subscriber-auth-info":null,"timestamp":1481856643848,"host":"messenger.yahoo.com"},"channel":"/meta/subscribe","clientId":"' + clientId + '","subscription":"/yahoo/iris/web/*"}]'; 
+
+        invocation.send(data);
+
+    }
+
+        function handlerAuth(evtXHR) {
+        if (invocation.readyState == 4)
+        {
+            if (invocation.status == 200)
+            {
+                var response = invocation.responseText;
+                var auth = JSON.parse(response);
+                authToken = auth[0].ext["Comet-auth-token"];
+                //clientId = auth[0].clientId;
+
+                var item = document.getElementById('res');
+                item.innerHTML += "<br><br><br> Auth Token: " + authToken;
+
+                setInterval(function() {
+                    callOtherDomain();
+                }, 2000);
+            }
+            else
+            {
+                alert("Invocation Errors Occured " + invocation.readyState + " and the status is " + invocation.status);
+            }
+        }
+
+    }
+
+    function caller() {
+        getAuthInfo();
+    }
+    
+    function callOtherDomain(){
+        invocation.open(method, url, true);
+        invocation.setRequestHeader('Content-Type', 'application/json');
+        invocation.setRequestHeader('Authorization', "Basic token=" + authToken);
+        invocation.withCredentials = true;
+        invocation.onreadystatechange = handler;
+        
+        var data = '[{"id":"12","ext":{"timestamp":1481850952554,"host":"messenger.yahoo.com"},"channel":"/meta/connect","connectionType":"long-polling","clientId":"' + clientId + '"}]'; 
+
+        invocation.send(data);         
+    }
+
+    function handler(evtXHR)
+    {
+
+        if (invocation.readyState == 4)
+        {
+            if (invocation.status == 200)
+            {
+                var response = invocation.responseText;
+                var result = JSON.parse(response);
+
+                if(result.length > 1) {
+                    var msg = result[1].data.msg;
+                    var user  = result[1].data.userName;
+                    var userid = result[1].data.userId;
+
+                    var item = document.getElementById('res');
+                    item.innerHTML += "<p>message: " + msg + "</p>" + "<p>User: " + user + "</p>" + "<p>userID: " + userid + "</p>";
+                } else {
+                    var msg = result[0].successful;
+                    var item = document.getElementById('res');
+                    item.innerHTML += "<p>ping successful? : " + msg + "</p>" ;
+                }
+            }
+            else
+            {
+                alert("Invocation Errors Occured " + invocation.readyState + " and the status is " + invocation.status);
+            }
+        }
+    }
+    
+    </script>
+</head>
+<body>
+    <form id="controlsToInvoke" action="">
+        <p>
+        <input type="button" value="Click to Invoke Another Site" onclick="doHandshake()" />
+        </p>    
+    </form>
+    <p id="intro">
+   CORS Pre flight
+    </p>
+
+    <p id="res"> </p>
+  
+</body>
+</html>
